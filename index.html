@@ -9,24 +9,32 @@
     <script src="2.js" defer></script>
    
 </head>
-<body id="element-for-background">
-    <div class="main">
-        <div class="head">
-        <h1>Битва шиноби</h1>
-        <img src="img/info.png" alt="">
+<section>
+    <h2>Огонь Вода Земля</h2>
+    <p>Правила: <br><br>
+        Вода тушит Огонь <br>
+        Огонь сжигает все на Земле <br>
+        Земля впитывает в себя Воду
+    </p>
+    <div class="items">
+        <button id="but1"><img src="img/f.jpg" alt="#" height="200px"></button>
+        <button id="but2"><img src="img/v.jpg" alt="#" height="200px"></button>
+        <button id="but3"><img src="img/z.jpg" alt="#" height="200px"></button>
     </div>
-    <div class="game">
-        <div class="ramka-1">
-    <button class="rez" id="but1"><img src="img/zeml.gif" alt=""></button>
-    <button class="rez" id="but2"><img src="img/voda.gif" alt=""></button>
-    <button class="rez" id="but3"><img src="img/veter.gif" alt=""></button>
-    <button class="rez" id="but4"><img src="img/molnia.gif" alt=""></button>
-    <button class="rez" id="but5"><img src="img/f.gif" alt=""></button>
+    <div class="items">
+        <div class="box">
+            <h3>Ваш ход:</h3>
+            <img src="img/ojid.jpg" alt="#" height="200px" id="img-user">
+        </div>
+        <div>
+            <h2 id="out"></h2>
+        </div>
+        <div class="box">
+            <h3>Ход компьютера:</h3>
+            <img src="img/ojid.jpg" alt="#" height="200px" id="img-comp">
+        </div>
+    </div>
     
-</div>
-<h2 id="out"></h2>
-
-</div>
-</div>
+</section>
 </body>
 </html>

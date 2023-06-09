@@ -1,72 +1,22 @@
 
 
-.main img {
-    width: 300px;
-    height: 300px;
-}
-.game img {
-    width: 250px ;
-    height: 142px;
-}
-.head {
-    margin-left: 492px;
-}
-.head h1 {
-    margin-left: 51px;
+section {
+    width: 1000px;
+    margin: 50px auto;
+    text-align: center;
 }
 
-.rez {
-    background-color: transparent;
-    
-    border-color: transparent;
-}
-#element-for-background{
-    background-image: url('img/pattern.svg');
-  }
-
-.ramka-1 {
-    position: relative;
-    z-index: 0;
-    flex-wrap: wrap;
-    height:340px;
-    width: 1300px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 30px auto;
+.items {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-family: 'Roboto Condensed', sans-serif;   
+    justify-content: space-between;
+    margin: 50px 0 0 0;
 }
-.ramka-1::before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    left: -50%;
-    top: -50%;
-    width: 200%;
-    height: 200%;
-    background-color: #EF6C00;
-    background-repeat: no-repeat;
-    background-size: 50% 50%, 50% 50%;
-    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(#EF6C00, #EF6C00), linear-gradient(#FFE0B2, #FFE0B2), linear-gradient(#EF6C00, #EF6C00), linear-gradient(#FFE0B2, #FFE0B2);
-    animation: anim-ramka-1 4s linear infinite;
+
+button {
+    border: none;
+    background-color: #fff;
 }
-.ramka-1::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 6px;
-    top: 6px;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
-    background:url(img/pattern.svg);
-    border-radius: 5px;
-}
-@keyframes anim-ramka-1 {
-    100% {
-        transform: rotate(1turn);
-    }
+
+button:hover {
+    outline: 2px solid rgba(0, 0, 0, 0.419);
 }

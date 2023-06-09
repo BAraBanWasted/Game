@@ -1,34 +1,27 @@
 let but1 = document.getElementById('but1')
 let but2 = document.getElementById('but2')
 let but3 = document.getElementById('but3')
-let but4 = document.getElementById('but4')
-let but5 = document.getElementById('but5')
 let out = document.getElementById('out')
 
+let imgUser = document.getElementById('img-user')
+let imgComp = document.getElementById('img-comp')
+
 but1.onclick = function() {
-    human = 'e' 
-    humturn('земля')
+    human = 'f'
+    humturn('огонь')
 }
 but2.onclick = function() {
-    human='v'
+    human='w'
     humturn('вода')
 }
 but3.onclick = function() {
     human='z'
-    humturn('ветер')
-}
-but4.onclick = function() {
-    human='m'
-    humturn('молния')
-}
-but5.onclick = function() {
-    human='o'
-    humturn('огонь')
+    humturn('земля')
 }
 
-const variant = ['e','v','z','m','o']
-const win = ['vo','oz','zm','me','ev']
-const loose = ['ve','ov','zo','mz','em']
+const variant = ['f','w','z']
+const win = ['wf','fz','zw']
+const loose = ['fw','zf','wz']
 let human=''
 let comp=''
 let pobeda=''
@@ -39,7 +32,7 @@ function humturn(turn){
 }
 
 function compturn(){
-    let r=Math.floor(Math.random()*5)
+    let r=Math.floor(Math.random()*3)
     console.log('комп выбрал',variant[r])
     comp=variant[r]
     result()
@@ -50,17 +43,35 @@ function result(){
     let res=human+comp
     if (win.includes(res)){
         console.log('вы выиграли')
-        pobeda='вы выиграли' 
+        pobeda='Вы выиграли'
         
     }
-    
     else if (loose.includes(res)){
         console.log('вы проиграли')
-        pobeda='вы програли'  
+        pobeda='Вы програли'
     }
     else {
         console.log('ничья')
-        pobeda='ничья'
+        pobeda='Ничья'
     }
-    out.innerText = 'ход человека - '+human+'\n'+'ход компа - '+comp+'\n'+pobeda
+    out.innerText = pobeda
+    if (human == 'z') {
+        imgUser.setAttribute('src', 'img/z.jpg')
+    }
+    if (human == 'w') {
+        imgUser.setAttribute('src', 'img/v.jpg')
+    }
+    if (human == 'f') {
+        imgUser.setAttribute('src', 'img/f.jpg')
+    }
+    if (comp == 'z') {
+        imgComp.setAttribute('src', 'img/z.jpg')
+    }
+    if (comp == 'w') {
+        imgComp.setAttribute('src', 'img/v.jpg')
+    }
+    if (comp == 'f') {
+        imgComp.setAttribute('src', 'img/f.jpg')
+    }
+    
 }
